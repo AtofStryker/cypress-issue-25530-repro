@@ -29,7 +29,7 @@ app.use(
 
 const checkJwt = auth({
   audience: authConfig.audience,
-  issuerBaseURL: `https://${authConfig.domain}`,
+  issuerBaseURL: authConfig.domain,
 });
 
 app.get('/api/external', checkJwt, (req, res) => {

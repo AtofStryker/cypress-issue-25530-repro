@@ -1,6 +1,6 @@
 describe('Username/Password login via auth0', () => {
   // NOTE: I couldn't get this to work. My guess is because my baseUrl is set to http://localhost:3000?
-  it.skip('logs in via Username/Password', () => {
+  it('logs in via Username/Password', () => {
     cy.visit('/');
     cy.get('input[type=text]').type(Cypress.env('AUTH0_USERNAME'));
     cy.get('input[type=password]').type(Cypress.env('AUTH0_PASSWORD'), {
@@ -13,7 +13,7 @@ describe('Username/Password login via auth0', () => {
     // cy.visit('/')
   });
 
-  it('logs in via Username/Password', () => {
+  it.skip('logs in via Username/Password', () => {
     cy.visit('/');
     cy.origin(Cypress.env('AUTH0_DOMAIN'), () => {
       cy.get('input[type=text]').type(Cypress.env('AUTH0_USERNAME'));

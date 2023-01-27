@@ -17,7 +17,7 @@ export class NavBarComponent implements OnInit {
 
   webAuth = new auth0.WebAuth({
     clientID: authConfig.clientId,
-    domain: `https://${authConfig.domain}`,
+    domain: authConfig.domain,
     responseType: "token id_token",
     scope: "openid profile",
     redirectUri: "http://localhost:3000/callback",
